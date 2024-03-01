@@ -1,0 +1,92 @@
+body {
+    font-family: 'Texturina';
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#gameBoard {
+    display: inline-block;
+    margin: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #d1c8c8, #333131);
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    user-select: none;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f8f8f8;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.win {
+    background-color: #7fff7f !important;
+    animation: scaleWinner 0.5s ease-in-out;
+}
+
+@keyframes scaleWinner {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #0056b3;
+}
